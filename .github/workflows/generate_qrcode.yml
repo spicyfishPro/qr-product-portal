@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install qrcode
+          pip install segno
 
       - name: Run QR code script
         run: python data/qrcode.py
