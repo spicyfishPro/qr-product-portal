@@ -26,7 +26,7 @@ jobs:
           pip install segno
 
       - name: Run QR code script
-        run: cd data && python data/qrcode.py
+        run: cd data && python qrcode.py
 
       - name: Commit and push changes
         env:
