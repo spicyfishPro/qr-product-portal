@@ -32,7 +32,7 @@ jobs:
           pip install segno
 
       - name: Run QR code script
-        run: cd data && python qrcode.py
+        run: cd data && python qrcode.py && node convert.js
 
       - name: Commit and push changes
         env:
