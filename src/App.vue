@@ -38,7 +38,7 @@ export default {
       const id = parseInt(urlParams.get("id"), 10);
 
       if (!id) {
-        this.errorMsg = "⚠️ 请添加URL参数，例如：?id=3";
+        this.errorMsg = "⚠️ 请添加URL参数。例如：?id=114514";
         return;
       }
 

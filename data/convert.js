@@ -1,3 +1,26 @@
+/**
+ * Converts CSV data to JSON format
+ * Reads data from 'data/data.csv' and writes to 'public/products.json'
+ *
+ * @requires fs - Node.js file system module
+ * @requires csv-parser - CSV parsing module
+ *
+ * CSV Format:
+ * - Headers: ID, 产品介绍(Product Introduction), 使用方法(Usage Method)
+ * - First line is skipped
+ *
+ * Output JSON Format:
+ * [
+ *   {
+ *     ID: number,
+ *     产品介绍: string,
+ *     使用方法: string
+ *   }
+ * ]
+ *
+ * @throws {Error} If CSV parsing fails or file operations fail
+ */
+
 const fs = require("fs");
 const csv = require("csv-parser");
 
