@@ -30,6 +30,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install segno
+          npm install
 
       - name: Run QR code script
         run: cd data && python qrcode.py && node convert.js
