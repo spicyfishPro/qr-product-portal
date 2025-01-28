@@ -29,11 +29,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install segno
 
-      - name: Debug directory structure
-        run: ls -R
-
       - name: Run QR code script
-        run: python data/qrcode.py
+        run: cd data && python qrcode.py
 
       - name: Commit and push changes
         run: |
