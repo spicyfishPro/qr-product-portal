@@ -45,7 +45,7 @@ fs.createReadStream("data.csv")
   })
   .on("end", () => {
     console.log("转换结果:", results);
-    fs.writeFileSync("public/products.json", JSON.stringify(results));
+    fs.writeFileSync("../public/products.json", JSON.stringify(results));
     console.log("转换完成，共处理", results.length, "条记录");
   })
   .on("error", (err) => {
