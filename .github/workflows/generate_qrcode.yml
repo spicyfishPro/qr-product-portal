@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "data/qrcode.py"
+      - "data/data.csv" # 添加对data.csv的监控
   workflow_dispatch:
 
 jobs:
@@ -15,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 确保获取完整的仓库历史
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -25,6 +28,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install segno
+          pip install csv
+
+      - name: Debug directory structure
+        run: ls -R
 
       - name: Run QR code script
         run: python data/qrcode.py
