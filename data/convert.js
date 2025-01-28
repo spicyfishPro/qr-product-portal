@@ -26,7 +26,7 @@ const csv = require("csv-parser");
 
 const results = [];
 
-fs.createReadStream("data/data.csv")
+fs.createReadStream("data.csv")
   .pipe(
     csv({
       headers: ["ID", "产品介绍", "使用方法"],
