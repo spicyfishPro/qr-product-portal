@@ -29,7 +29,7 @@ const results = [];
 fs.createReadStream("data.csv")
   .pipe(
     csv({
-      headers: ["ID", "产品介绍", "使用方法"],
+      headers: ["ID", "产品名称", "产品介绍", "使用方法"],
       skipLines: 1, // 修改为1，跳过第一行
     })
   )
@@ -39,6 +39,7 @@ fs.createReadStream("data.csv")
 
     results.push({
       ID: parseInt(data.ID, 10),
+      产品名称: data.产品名称,
       产品介绍: data.产品介绍,
       使用方法: data.使用方法,
     });
